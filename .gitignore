@@ -16,5 +16,7 @@ node_modules/
 # ─── Tooling ─────────────────────────────────────────────────────────────────
 .claude/
 
-# ─── Local task notes ────────────────────────────────────────────────────────
+# ─── Local task notes & agent workflow artifacts ─────────────────────────────
+# Content is recorded on GitHub Issues; these are local process memory only
 tasks/
+docs/superpowers/

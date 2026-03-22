@@ -16,13 +16,21 @@ A personal app for logging coffee beans and tracking tasting notes over time. Re
 
 ## Local Development
 
-**Prerequisites:** Docker, Go, Node.js
+**Prerequisites:**
+
+| Tool | Purpose | Install |
+|------|---------|---------|
+| Docker | Run PostgreSQL locally | [docker.com](https://docker.com) |
+| Go | Build and run the API | [go.dev](https://go.dev) |
+| Node.js | Run the Next.js frontend | [nodejs.org](https://nodejs.org) |
+| air | Go hot reload | `go install github.com/air-verse/air@latest` |
+| overmind | Run all services in parallel (`make dev`) | `brew install overmind` |
 
 ```bash
 cp .env.example .env
 make dev-db       # Start PostgreSQL (Docker)
 make migrate      # Run database migrations
-make dev          # Start Go API (port 8080) + Next.js (port 3000)
+make dev          # Start Go API (port 8080) + Next.js (port 3000) via overmind
 ```
 
 Next.js proxies all `/api/*` requests to the Go backend, so no CORS issues when calling the API from client components.

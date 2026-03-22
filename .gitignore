@@ -1,0 +1,22 @@
+# ─── OS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+
+# ─── Secrets & environment ───────────────────────────────────────────────────
+.env
+.env.local
+.env.development
+.env.production
+# .env.example is intentionally NOT ignored (committed as a template)
+
+# ─── Next.js (web/) ──────────────────────────────────────────────────────────
+.next/
+node_modules/
+.turbo/
+
+# ─── Tooling ─────────────────────────────────────────────────────────────────
+.claude/
+
+# ─── Local task notes & agent workflow artifacts ─────────────────────────────
+# Content is recorded on GitHub Issues; these are local process memory only
+tasks/
+docs/superpowers/

@@ -10,6 +10,7 @@ import (
 
 // NewServer creates and configures an Echo instance with middleware and stub routes.
 // It does not call Start() — that is the caller's responsibility.
+// d is accepted for future use (Phase 3 will read d.Cfg and wire real handlers).
 func NewServer(d *builder.Dependency) *echo.Echo {
 	e := echo.New()
 	e.HideBanner = true

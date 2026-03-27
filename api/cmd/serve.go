@@ -54,6 +54,7 @@ var ServeCommand = &cli.Command{
 
 		if err := e.Shutdown(shutCtx); err != nil {
 			log.Error().Err(err).Msg("shutdown error")
+			return err
 		}
 
 		return nil

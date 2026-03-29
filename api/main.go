@@ -15,7 +15,7 @@ func main() {
 		Usage: "Coffee Journal API server",
 		Commands: []*cli.Command{
 			cmd.ServeCommand,
-			// cmd.MigrateCommand added in issue #14
+			cmd.MigrateCommand,
 		},
 	}
 

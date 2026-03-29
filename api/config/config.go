@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -45,10 +44,6 @@ func Load() (*Config, error) {
 		R2SecretAccessKey: os.Getenv("R2_SECRET_ACCESS_KEY"),
 		R2Bucket:          os.Getenv("R2_BUCKET"),
 		JWTSecret:         os.Getenv("JWT_SECRET"),
-	}
-
-	if cfg.DatabaseURL == "" {
-		return nil, fmt.Errorf("config: DATABASE_URL is required")
 	}
 
 	if cfg.Port == "" {

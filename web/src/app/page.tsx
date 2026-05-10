@@ -1,3 +1,7 @@
 export default function Home() {
-  return <main />;
+  return (
+    <main>
+      <p>Timeline coming soon</p>
+    </main>
+  );
 }

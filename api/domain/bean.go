@@ -1,6 +1,7 @@
 package domain
 
 import (
+	"context"
 	"fmt"
 	"time"
 
@@ -74,3 +75,11 @@ func (b *Bean) IsPublic() bool           { return b.isPublic }
 func (b *Bean) CreatedAt() time.Time     { return b.createdAt }
 func (b *Bean) UpdatedAt() time.Time     { return b.updatedAt }
 func (b *Bean) DeletedAt() *time.Time    { return b.deletedAt }
+
+type BeanRepository interface {
+	Create(ctx context.Context, bean *Bean) error
+	GetByID(ctx context.Context, id uuid.UUID) (*Bean, error)
+	ListByUser(ctx context.Context, userID uuid.UUID) ([]*Bean, error)
+	Update(ctx context.Context, bean *Bean) error
+	SoftDelete(ctx context.Context, id uuid.UUID) error
+}
